@@ -3,4 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: "Mike Hay"
+subtitle: Better living through math
 ---
