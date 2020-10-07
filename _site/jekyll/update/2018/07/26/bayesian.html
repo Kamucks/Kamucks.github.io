@@ -1,0 +1,612 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.2 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Bayesian statistics: Common sense formalized - Michael Hay, Ph.D.</title>
+<meta name="description" content="(This content first appeared on openchannels.org)">
+
+
+  <meta name="author" content="Michael Hay, Ph.D.">
+  
+  <meta property="article:author" content="Michael Hay, Ph.D.">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Michael Hay, Ph.D.">
+<meta property="og:title" content="Bayesian statistics: Common sense formalized">
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2018/07/26/bayesian.html">
+
+
+  <meta property="og:description" content="(This content first appeared on openchannels.org)">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-07-26T00:00:00-07:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2018/07/26/bayesian.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Michael Hay, Ph.D.",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Michael Hay, Ph.D. Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--post">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Michael Hay, Ph.D.
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Michael Hay, Ph.D.</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Functional programmer and data surgeon</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Spokane, WA</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Kamucks" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Bayesian statistics: Common sense formalized</h1>
+    
+    <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<p>(This content first appeared on <a href="openchannels.org">openchannels.org</a>)</p>
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<p dir="ltr">In the last posts (<a href="https://www.openchannels.org/blog/mikehay/p-values-do-not-tell-you-what-you-probably-think-they-do">first</a>, <a href="https://www.openchannels.org/blog/mikehay/p-values-part-ii-how-p">second</a>), I outlined a number of common errors in the usage and interpretation of P-values. Due to the base-rate fallacy or the multiple comparisons problem, the significance level $ \alpha $ of a null-hypothesis significance test can easily be an order of magnitude lower than the true false positive rate. <strong>For example, under $p&lt;0.05$, we could easily have a 50% error rate.</strong> These issues are one of the primary causes of the replication crises currently shaking psychology and medical science, where replication studies have found that the majority of significant results examined are insignificant upon replication. Fisheries and marine policy have many of the same risk factors driving the unreliability of scientific findings in those other fields, but no one has actually attempted to do any replication studies yet.</p>
+
+<p dir="ltr">Other common techniques such as confidence intervals and likelihood-ratio tests ameliorate some of the shortcomings of P-values and null-hypothesis significance tests. However, these techniques still suffer from most of the really severe problems, like the base-rate fallacy. The reason behind these deficiencies is that all of these methods follow the frequentist statistical paradigm. In the frequentist paradigm, the probability of some event is considered to be the proportion of times, after repeating the experiment an infinite number of times, that the event occurs.</p>
+
+<p dir="ltr">Suppose we wish to estimate the mean rockfish length in an MPA. In typical frequentist inference, the results of an experiment (here, the observed fish lengths) are assumed to be random. The probability of observing some data is the proportion of times that data occurs after an infinite number of trials. However, the hypotheses (e.g., the true mean fish length being a particular value) that we are trying to infer with our experiment are considered unknown but not random. <strong>This is why frequentist methods cannot give you the probabilities of competing hypotheses, since the hypotheses aren&#39;t considered to be random in the first place.</strong> For the same reason, frequentist techniques make it very hard to use prior information, which is the underlying cause behind the multiple-comparisons problem and the base-rate fallacy.</p>
+
+<p dir="ltr">Fortunately, Bayesian statistical methods offer not only powerful solution to these problems, but also a different, more intuitive way of thinking about probability and evidence than the frequentist paradigm. Bayesian methods are the only way of coherently combining past information with new information, which allows it to more easily avoid issues like this one:</p>
+
+<p dir="ltr"><img alt="" src="/assets/frequentists_vs_bayesians.png" style="max-height:578px; width:381px" /></p>
+
+<p dir="ltr">(Don&#39;t take this cartoon too seriously. It is a hilariously bad example of the base-rate fallacy, not an indictment of frequentist inference in general.<a href="http://xkcd.com"> xkcd.com</a>; Randall Munroe, CC Attribution-NonCommercial License 2.5)</p>
+
+<p dir="ltr">In the Bayesian philosophy, probability represents <em>degrees of belief</em>. While this is ultimately just a philosophical difference, the two paradigms do tend to result in very different methods and interpretation in practice.</p>
+
+<p dir="ltr">Bayesian statistics considers the possible hypotheses (here, the true mean fish length) to be random because we don&#39;t know which one is true. Before the experiment, we have prior knowledge about the mean fish length (maybe that we know that mean fish lengths in most areas are between 75 and 85 cm), encoded in a prior probability distribution of the mean. We then observe a sample of fish. This gives us more information, which we combine with our already-known prior distribution using Baye&#39;s theorem (more about that in a second) to form the posterior distribution encompassing all of our knowledge after doing the experiment. So, after doing our experiment, we don&#39;t have a single point estimate of the mean, but a probability distribution (since we still don&#39;t know it exactly).</p>
+
+<p dir="ltr">Baye&#39;s theorem is the following: Suppose that we wish to find the probability of some event or hypothesis $A$ (for example, the mean length of rockfish in an MPA being a certain value) based on prior information giving the prior probability $P(A)$ of $A$ along with new information: We observed some event $B$ (say, the sample mean length of a sample of fish), and we know the likelihood $P(B|A)$ of observing $B$ given that $A$ is true. This likelihood is what frequentist inference gives us, but with Baye&#39;s theorem, we can reverse $P(B|A)$ to get the probability of $A$ given that $B$ occurred (this is what we actually want):</p>
+
+<p dir="ltr">$\mathrm{P}(A|B) = \frac{P(B|A)P(A)}{P(B)}$.</p>
+
+<p dir="ltr">The quantity $\mathrm{P}(B)$ is the marginal probability of observing $B$ independent of $A$. It just acts as a normalizing constant so the probabilities all sum to one. It can be found by summing $P(B|A)P(A)$ over all possible $A$ (or integrating if there are infinite $A$, like if it is a population mean that could be any positive value). The important part is the numerator: We are simply multiplying the prior probability $\mathrm{P}(A)$ by the likelihood $\mathrm{P}(B|A)$ of observing the data $B$ given that the hypothesis $A$ is true. So if we consider the event $A$ to be a priori improbable, we need a high likelihood $\mathrm{P}(B|A)$ from our experiment to overcome our prior beliefs about $A$. For example, if we knew that the average adult rockfish in most areas is nearly always around 90 cm, it might take a very large sample to convince us that it is more like around 110 cm.</p>
+
+<p dir="ltr">Baye&#39;s theorem is actually just a generalization of common-sense logical rule of contrapositivity (if $A$ implies $B$, then &quot;not $B$&quot; implies &quot;not $A$&quot;) to when we are uncertain about $A$ and $B$. Baye&#39;s theorem is something you qualitatively employ every day without realizing it. Bayesian statistics just formalizes it.</p>
+
+<h2 dir="ltr">A simple example</h2>
+
+<p dir="ltr">Let&#39;s go back to rockfish lengths. Suppose we wish to estimate the mean rockfish length in an MPA. With Bayesian inference, we start with a model that describes our problem. Let&#39;s do that.</p>
+
+<p dir="ltr">First, suppose we know that adult rockfish lengths in any population are approximately normally distributed (this isn&rsquo;t true, but it makes for a good simple example). Given this, we know that the population inside the MPA is normal with some unknown mean $\mu$ and standard deviation $\sigma$. For simplicity in this example, let&#39;s assume that we actually know the standard deviation $\sigma$ of rockfish lengths in all populations is exactly 30 cm, but we don&#39;t know the mean.</p>
+
+<p dir="ltr">Unlike the frequentist hypothesis testing, we are not framing it as a choice between a null hypothesis and an alternative hypothesis. Hypothesis testing (whether frequentist or Bayesian) doesn&#39;t make very much sense for this problem, since there are more than two alternatives.</p>
+
+<p dir="ltr">The first task is to quantify our prior knowledge of the distribution of fish lengths in the MPA. We also know the standard deviation exactly (30 cm), so we just need to figure out how to represent our uncertainty of the mean fish length. We represent this uncertainty as a prior distribution over the mean. <strong>I emphasize that the prior is a distribution of the mean parameter $\mu$ of fish lengths, not a distribution of the fish lengths themselves.</strong></p>
+
+<p dir="ltr">The normal distribution is actually a good choice for the prior distribution of the mean, because of the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem">central limit theorem</a>. So, we need a prior mean $\mu_0$ and a prior standard deviation $\sigma_0$ to encode our prior knowledge of the mean in a normal distribution. Let&rsquo;s say we know that similar MPAs tend to have average lengths around 80 cm, and have a standard deviation of around 2 cm. In other words, about ⅔ of similar MPAs have average lengths between 78 and 82 cm.&nbsp;From this, we can represent our prior beliefs of mean fish length as being approximately normal with mean $\mu_0 = 80$ cm and standard deviation $\sigma_0 = 2$ cm. The mean fish lengths can&#39;t of course be exactly normal, because then fish could have negative lengths. But, it doesn&#39;t matter too much here, since there is about a 95% chance that the average fish length $\mu$ in the MPA is between $80 \pm 2 \times 2 = 80 \pm 4$.</p>
+
+<p dir="ltr">Next, we collect our fish length data, which we know is normally distributed. Suppose that we took a sample of 100 fish, yielding a sample mean length of $\bar{x}=90$ cm. We already know the standard deviation $\sigma$ of fish lengths (as opposed to the mean) is exactly 30 cm, so we don&rsquo;t have to worry about the sample standard deviation. To summarize, we have the following model,</p>
+
+<p dir="ltr">$\mathrm{P}(\mu) \sim \mathrm{Normal}(80,2)$</p>
+
+<p dir="ltr">$\mathrm{P}($length of fish $i = x | \mu) \sim \mathrm{Normal}(\mu,\sigma=30)$</p>
+
+<p dir="ltr">The first line is our prior distribution of mean length $\mu$. The second is the likelihood of observing a fish in our sample with length $x$, given that the mean is some $\mu$ taken from the prior distribution. For our sample of 100 fish, there are 100 such likelihood terms for each fish $i$. Let&#39;s just write the total likelihood of observing all the fish that we did, given $\mu$, as $\mathrm{P}(D|\mu)$.</p>
+
+<p dir="ltr">Now, we find the posterior distribution of mean fish lengths using Baye&#39;s theorem:</p>
+
+<p dir="ltr">$$\mathrm{P}(\mu|D) =\frac{P(D|\mu)P(\mu)}{\mathrm{P}(D)},$$</p>
+
+<p dir="ltr">Happily, in this case, the normalizing constant $\mathrm{P}(D)$ can be integrated out analytically. It turns out that the posterior is also a normal distribution:</p>
+
+<p dir="ltr">$$\mathrm{P}(\mu|D) = \mathrm{Normal}(\mu_1,\sigma_1),$$</p>
+
+<p dir="ltr">where,</p>
+
+<p dir="ltr">$$\sigma _1^2 = \frac{1}{n/\sigma^2 + 1/\sigma_0^2} = \frac{1}{100/30^2 + 1/2^2}\approx 2.8$$</p>
+
+<p dir="ltr">and,</p>
+
+<p dir="ltr">$$ \mu_1 = \frac{1}{\frac{1}{\sigma_0^2} + \frac{n}{\sigma^2}}\left(\frac{\mu_0}{\sigma_0^2} + \frac{n \bar{x}}{\sigma^2}\right) $$ $$ = \frac{1}{\frac{1}{2^2} + \frac{100}{30^2}}\left(\frac{80}{2^2} + \frac{100 \times 90}{30^2} \right) \approx 83$$</p>
+
+<p dir="ltr">The posterior mean of the fish length mean is an average of the prior mean and the sample mean from the data, weighted by the number of observations and standard deviations $\sigma_0=2$ of the prior, and $\sigma=30$ of the fish lengths. So with this analysis, we now think that the average fish length in the MPA is about 83 cm. Our prior information was that mean fish lengths are close to 80 cm the vast majority of the time. Thus, our observed sample mean of 90 cm was most probably due to happening to observe some large fish by chance from an MPA that probably has somewhat above average fish lengths. The corresponding frequentist estimate is 90 cm (the sample mean). This does not take into account prior information. Naively interpreted, the frequentist estimate jumps to the conclusion that the MPA has an incredibly large average fish length, 90 cm. That is 5 standard deviations above the mean, which should essentially never happen. <strong>We would come to a completely wrong conclusion about the effectiveness of this MPA with the frequentist estimate. </strong>The Bayesian result avoids the base-rate fallacy with prior information, following the adage &quot;extraordinary claims require extraordinary evidence.&quot;</p>
+
+<p dir="ltr">That was a very simple example. In practice, we would also have a prior distribution over the standard deviation of fish lengths, since we don&#39;t actually know the standard deviation (there is still an analytical solution in that case). In the previous example, the normal prior for the mean fish length is a <a href="https://en.wikipedia.org/wiki/Conjugate_prior">conjugate prior </a>to the normal likelihood $\mathrm{P}($length of fish $i = x | \mu)$ of observing a particular fish length <em>given </em>the mean. When using a prior conjugate to the likelihood, the posterior can be expressed analytically in the same distributional form as the prior. Here, the prior was normal, so the posterior was also normal. The likelihood was also normal, but that only holds in this particular case. For example, the conjugate prior for variance $\sigma^2$ of fish lengths (not the variance of the mean) is the <a href="https://en.wikipedia.org/wiki/Inverse-gamma_distribution">inverse gamma</a> distribution, and the posterior is also inverse gamma, rather than normal. In the last example, we assumed we knew that $\sigma^2$ was exactly $30 \times 30=900$. If we weren&#39;t sure about the $\sigma^2$, we could have just encoded our less than exact knowledge by using an inverse gamma prior.</p>
+
+<p dir="ltr">For many problems, there are no analytical exact solutions for the posterior distribution as we had here. The bugaboo is the normalization constant $P(A)$, which is often impossible to calculate exactly. Fortunately, there are a number of free and open-source software packages that offer push-button fast and accurate numerical approximations of posterior distributions. Popular ones include <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwiGjubjprjcAhV9HDQIHTkUCswQFjAAegQIBRAC&amp;url=http%3A%2F%2Fmc-stan.org%2F&amp;usg=AOvVaw2pakAj7AXtVlxx6ONc9UQg">Stan</a> (standalone modeling language with interfaces in in R, Python, and Julia), <a href="https://docs.pymc.io/">PyMC3 </a>(my favorite, in Python), and <a href="http://edwardlib.org/">Edward</a> (Python).</p>
+
+<p dir="ltr">Notice that we did this example by thinking about our problem domain and our prior knowledge, and specifying a model that that follows our knowledge of the problem. We represent anything we don&#39;t know exactly as a probability distribution, which we just choose to look like our state of knowledge.</p>
+
+<p dir="ltr">These characteristics make the Bayesian model intuitive than typical frequentist null-hypothesis statistical testing, where instead of specifying a model that directly represents our prior knowledge and the experiment, we have to choose from a<a href="https://en.wikipedia.org/wiki/Category:Statistical_tests"> zoo</a> of statistical tests and techniques with confusing assumptions and unclear relationships to the problem at hand. Due to this unintuitive nature, frequentist inference is often done on the basis of lore and tradition than sound mathematics.</p>
+
+<h2 dir="ltr">Conclusions</h2>
+
+<p dir="ltr">Bayesian methods offer the following advantages over frequentist techniques:</p>
+
+<ul style="list-style-type:disc">
+	<li dir="ltr">
+	<p dir="ltr">They provide a logically consistent way of combining previously known information with new information. Thus, Bayesian statistics are a rigorous way of avoiding the base-rate fallacy. The base-rate fallacy only occurs with frequentist methods because they cannot use prior information in a straightforward way.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">Bayesian models are more intuitive to correctly specify than frequentist tests.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">Bayesian inference tells us what we want to know. Using Baye&#39;s theorem, we get actual probabilities of competing hypotheses. This is what we need to make rational decisions under uncertainty. Frequentist methods (including P-values and confidence intervals) do not give us this.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">People think in a Bayesian way. This is perhaps a reason why frequentist techniques like P-values and confidence intervals are so consistently misinterpreted in a Bayesian way. For example, the inverse-probability fallacy from the previous post is the misinterpretation of a P-value as a Bayesian posterior probability.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">Bayesian statistics<a href="http://andrewgelman.com/2016/08/22/bayesian-inference-completely-solves-the-multiple-comparisons-problem/"> completely solves the multiple comparisons problem</a>. The MCP is sidestepped if we use prior information of the probability of hypotheses.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">Bayesian statistics avoids the <a href="https://www.openchannels.org/blog/mikehay/p-values-part-ii-how-p">HARKing problem</a>. In the frequentist paradigm, we should only test hypotheses that we have a prior reason for suspecting might be true. This knowledge is implicit and ill-defined. Bayesian statistics makes it explicit and rigorous by encoding the knowledge in the prior distribution. A hypothesis formed after observation of the data can be assigned a prior reflecting the fact that we have no a-priori reason to believe it might be true.</p>
+	</li>
+</ul>
+
+<p dir="ltr">Bayesian methods are often criticized for being subjective due to their use of priors. However, all statistical methods are subjective. Anyone who thinks they can banish subjectivity from their data analysis is dangerously fooling themselves. All statistical methods require some kind of prior knowledge about the data. Frequentist inference methods require this prior information to be taken into account in ad-hoc and often qualitative ways, either in experimental design, or in interpretation of the results. Bayesian methods just make this more explicit and intuitive, by encoding prior information in the prior distribution. In addition, the use of a prior distribution is actually conservative. A prior distribution reduces the amount that the data informs our belief. A noisy or small sample will change our beliefs less than a large sample.</p>
+
+<p dir="ltr">One may wonder why frequentist methods are dominant in science despite their shortcomings. The reasons behind this have mostly to do with inertia. Bayesian methods tend to be more computationally intensive. Before the advent of fast computers, frequentist methods were the only tractable ways to perform statistical inference in many cases. But now, computers are very fast and they are very cheap, so this advantage of frequentist statistics is largely moot. Apart from computational reasons, scientists are usually only trained in frequentist methods. Most scientists are loathe to spend time learning abstract things not directly related to their work. Lastly, reviewers are often suspicious of methodologies unfamiliar to them, which further discourages the use of Bayesian statistics.</p>
+
+<p dir="ltr">However, this is changing, albeit slowly. In geophysics, Bayesian methods are seeing increased use for inverse problems such as imaging the Earth&#39;s interior with seismic waves, due to their resistance to overfitting with noisy data, as well as the well-calibrated uncertainty estimates they provide. For the same reasons, Bayesian methods (or<a href="https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation"> various</a><a href="https://en.wikipedia.org/wiki/Variational_Bayesian_methods"> approximations</a>) are the norm in artificial intelligence and machine learning. Bayesian methods have long been used for weather forecasting: The parameters of the equations of weather physics are considered random, and their distributions are updated using Baye&#39;s theorem on a nearly continuous basis with new meteorological data to produce weather forecasts.</p>
+
+<p dir="ltr">Frequentist statistics are a valid tool in many situations. Most of the problems with P-values that I&#39;ve laid out can be avoided by properly applying and interpreting frequentist methods. However, doing so tends to be complex, error prone, and highly unintuitive. Bayesian methods and their equivalent frequentist techniques also give very similar answers if the data are highly informative compared to the prior. Many frequentist methods do in fact have some kind of Bayesian interpretation. Often things like confidence intervals are equivalent to Bayesian techniques with certain choices of prior distributions, often uninformative priors which attempt to encode a lack of prior information. However, even these priors contain information, thus subjectivity still remains.</p>
+
+<p dir="ltr">Bayesian statistics are a large subject that won&#39;t fit into this post. In future posts I will give in-depth examples of Bayesian inference, including how it can be done on a computer.</p>
+
+
+
+<ul class="taxonomy__index">
+  
+  
+    <li>
+      <a href="#2018">
+        <strong>2018</strong> <span class="taxonomy__count">3</span>
+      </a>
+    </li>
+  
+    <li>
+      <a href="#2017">
+        <strong>2017</strong> <span class="taxonomy__count">2</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+
+
+  <section id="2018" class="taxonomy__section">
+    <h2 class="archive__subtitle">2018</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/jekyll/update/2018/07/26/bayesian.html" rel="permalink">Bayesian statistics: Common sense formalized
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">(This content first appeared on openchannels.org)
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/jekyll/update/2018/06/28/p-values.html" rel="permalink">P-values part II: How a p&lt;0.05 result can have more than a 50% chance of being wrong
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">(This content first appeared on openchannels.org)
+
+</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/jekyll/update/2018/06/19/p-values.html" rel="permalink">P-values do not tell you what you probably think they do
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">(This content first appeared on openchannels.org)
+
+</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+  <section id="2017" class="taxonomy__section">
+    <h2 class="archive__subtitle">2017</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/jekyll/update/2017/07/25/forest_fires.html" rel="permalink">Turns out that predicting forest fires from scant met data is hard
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+
+  
+    
+
+
+
+
+
+Turns out that predicting forest fire size from scant met data is hard.&#194;&#182;
+
+
+
+
+
+
+
+Every year, the...</p>
+  </article>
+</div>
+
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/jekyll/update/2017/05/12/variational-glm.html" rel="permalink">Dropout and early stopping with Adagrad
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+I was experimenting with applying variational dropout, using multiplicative Gaussian output noising, to primal generalized Gaussian process models. I’m goin...</p>
+  </article>
+</div>
+
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+  </section>
+
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Michael Hay, Ph.D.. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
