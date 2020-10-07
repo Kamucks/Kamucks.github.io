@@ -1,0 +1,82 @@
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<p><a href="https://www.openchannels.org/blog/mikehay/p-values-do-not-tell-you-what-you-probably-think-they-do">In the last post</a>, I described some common misconceptions and problems with the use of null-hypothesis significance tests and P-values. In this post, I&#39;ll show more common ways that P-values are often misapplied, including how a significant result under $\alpha = 0.05$ can have more than a 50% chance of being wrong.</p>
+
+<h2>Base-rate fallacy</h2>
+
+<p>Null-hypothesis significance testing often underestimates the chance that a significant result is invalid because it is extremely difficult to take into account the prior probability of the alternative hypothesis being true. Ignoring prior information in this way is called the <em>base-rate fallacy.</em></p>
+
+<p>Going back to the MPA example from the last post, suppose that MPAs usually aren&#39;t effective at helping rockfish: for a given MPA there is a 10% chance <em>a priori</em> that rockfish are on average significantly longer within the MPA than outside. We decide to see if one particular MPA is effective at producing longer rockfish. We test our hypothesis by recording the lengths of 100 fish inside the MPA and 100 fish outside. We find that the lengths do differ significantly under a significance level of $\alpha = 0.05$ (or p&lt;0.05). What is the chance that this significant result is valid?</p>
+
+<p>First, let&#39;s define a concept called <em>statistical power.</em> The statistical power of a study is the chance that we correctly reject the null hypothesis <em>if the null hypothesis is false.</em> Larger sample sizes and larger effect sizes increase statistical power. If the MPA does actually result in longer rockfish, we would have a better chance of detecting this with a large sample, or if the size differences were huge. As a sidenote, researchers often conclude there is no significant effect when a test fails to reject the null hypothesis. However, this erroneous if statistical power is not reported, and it usually isn&#39;t.</p>
+
+<p>Anyway, if we had 100% statistical power (we always reject the null hypothesis if it is actually false), then we have a 10% chance of correctly rejecting the null hypothesis, since the null hypothesis has a 10% chance of being false. However, with a significance level of $\alpha = 0.05$, we have a 5% chance of rejecting the null hypothesis <em>if the null hypothesis is true.</em> Since the null hypothesis has a 90% chance of being true a priori, we have a $0.05 \times 0.9 = 4.5\%$ chance of making a false positive. So, we have a 10% chance of making a true positive, and a 4.5% chance of making a false positive.</p>
+
+<p>Suppose we got a positive result, which we can expect $4.5\%+10\%=14.5\%$ of the time. The chance that this positive result is invalid is given by:</p>
+
+<p>(chance of an false positive)/(the chance of getting a true positive +&nbsp; the chance of a false positive)</p>
+
+<p>This is $0.045/(0.1+0.045) \approx 0.31$.</p>
+
+<p><strong>That means we have about a 31% chance that a significant result is actually invalid, not a 5% chance!</strong></p>
+
+<p>It gets worse. That figure assumes we have an impossible 100% statistical power.<strong> The<em> </em>lower the statistical power of the study, the higher the chance that a significant result is erroneous. This is something not commonly appreciated.</strong> While the probability of a false positive <em>given the null hypothesis</em> is fixed by the significance level, low statistical power means that a true significant result has a high probability of not being found. Therefore, the probability of a false positive is inflated compared to the probability that a true positive is found.</p>
+
+<p>Suppose our statistical power is instead 40%: We have an 40% chance of finding a significant difference in lengths when the lengths are indeed different. 40% statistical power <a href="http://www.fc.up.pt/pessoas/amsantos/support/peterman1990.pdf">actually isn&#39;t too shabby for many fisheries studies.</a></p>
+
+<p>The alternative hypothesis has a 10% chance of being true, but we only detect this 40% of the time. So, we can expect to make true positives $0.1 \times 0.4 = 4\%$ of the time, instead of the 10% of the time if we had 100% power.</p>
+
+<p><strong>So, we are making false positives 4.5% of the time, and true positives 4% of the time. This means that if we get a significant result, there is about a 53% chance that it is wrong! </strong>That is much larger than 5%. It is a reason why we cannot treat the P-value or the significance level as the probability that the null hypothesis is true, since the P-value cannot take into account prior information. It only looks at one source of error.</p>
+
+<p>This isn&#39;t some sort of wacky unrealistic scenario I have constructed here. Statistical powers and prior probabilities like these are not out of the ordinary, and very few studies attempt to take into account prior plausibility of hypotheses when evaluating data.</p>
+
+<h2>HARKing</h2>
+
+<p>Suppose you know two people named Dave. Despite sharing the same name, they aren&#39;t especially similar people. Dave #1 is a welder, Dave #2 works in HR. Dave #1 likes to hike, Dave #2 prefers to watch Netflix. Dave #1 likes pepperoni, Dave #2 likes Hawaiian, etc, etc. But then you discover that both Daves are avid <a href="https://en.wikipedia.org/wiki/Quilling">quillers</a>. As a fisheries policy researcher, you know that only 1 in 1000 people enjoy quilling. Wow! What are the chances! From this, you hypothesize that people named Dave like quilling. Your null hypothesis is that the proportion of Daves that like quilling is the same as the general population (1/1000). Under this null hypothesis (and assuming independence), the chance of observing two Daves in a row that like quilling is one in a million (p = 0.000001). With such a tiny P-value, this is rock-solid, nearly irrefutable statistical evidence that people named Dave like quilling! Right?</p>
+
+<p>But you probably feel that something is funky about this, and you would be correct. The problem is that we went through many possible ways the Daves could be similar, until we found something that they have in common (that is rare in the general population). Since both people are named Dave, we hypothesized that they have this in common due to their name. However, we tested this hypothesis on the same two Daves. If we tested this hypothesis on another Dave, and he liked quilling too, maybe we&#39;d be on to something (p=0.001). However, in this case, we have prior knowledge that it is ridiculous to think that Daves should like quilling more than Marks or Stacys, so a relationship between Daveness and quilling is still improbable.</p>
+
+<p>This form of error is sometimes known as HARKing (Hypothesizing After Results are Known), or post-hoc theorizing. HARKing is the formulation of hypotheses from data, and then testing the hypotheses on the same data. This is often done by researchers with nothing but honest intentions, but it can nonetheless lead to garbage conclusions. Going back to our fish length example, suppose we could not find a significant difference in fish lengths. However, we happened to notice that there is a statistically significant difference in the proportion of pregnant females within and without the MPA. We then conclude that the MPA aids in rockfish reproduction by offering more protection for breeding fish. This is a tempting thing to do, and might sound reasonable. However, it suffers from the same problem that our analysis of the Daves did, and is not valid.</p>
+
+<h2>Multiple comparisons</h2>
+
+<p>Suppose we wish to test the efficacy of an MPA at increasing fish populations. We hypothesize that reduced pressure from fishing (assuming actual enforcement exists) allows more breeding, and more fish. To test this, we use fish counts taken before the implementation of the MPA, and again five years after the formation of the MPA (assuming nothing else has changed). Instead of just looking at a single species, we look at ten different species of fish. After all, the protection the MPA provides might affect some fish populations more than others.</p>
+
+<p>Suppose that difference in fish counts for 9 species were found to be insignificant (let&#39;s say under $\alpha = 0.05$), but the difference in the count of marlin was significant, with $p = 0.03$. So, can we say that while the MPA doesn&#39;t appear to help the other species, it did result in an increase in marlin counts?</p>
+
+<p>No. The issue is that we did 10 hypothesis tests under an $\alpha = 0.05$ significance level. In other words, we accept a 5% chance of the null hypothesis being rejected if it is in fact true. If the null hypothesis is indeed true and the tests are independent, then for 10 tests, the chance that at least one of them yields a false positive (known as the familywise error-rate) is one minus the probability that all do not reject the null hypothesis: $1 - (1 - \alpha)^{10} = 1 - 0.95^{10} \approx 0.4$.</p>
+
+<p><strong>There is a 40% chance that we will wrongfully conclude the MPA is effective if it is actually not effective. </strong>This is known as the multiple comparisons problem (MCP), or &quot;look-elsewhere effect.&quot; This is related to HARKing, but occurs when we test multiple hypotheses simultaneously. The MCP is a nuanced and difficult problem to solve, at least when we confine ourselves to frequentist hypothesis testing. The simplest and perhaps most common way to correct for the MCP is the Bonferroni correction. Here, if we desire a familywise error rate of no more than $\alpha_{FW}$ (without making any independence assumptions), for an individual test out of $n$ total tests, we accept the null hypothesis when $p&lt;\alpha_{FW}/n$. In the above case, if we want $\alpha_{FW}=0.05$, and we have 10 tests, we need to accept each individual null hypothesis whenever $p &lt; 0.005$ (or, $\alpha=0.05/10 = 0.005$). Unfortunately, with such small significance levels, this correction for MCP severely decreases the power of the study (i.e., it increases the probability of a false negative). This decrease in power will usually then increase the chances that a significant result is erroneous, offsetting the lower false positive rate we get from the Bonferroni correction.</p>
+
+<p>Unfortunately, it&#39;s common practice for researchers to do many tests on data they collect, and to not report null results. Thus, this error can often be difficult to detect in the literature. Even worse, this error can easily occur in concert with the base rate fallacy.</p>
+
+<h2>Difference of differences fallacy</h2>
+
+<p>Suppose that we have two nearby MPAs. We test each one to see if rockfish lengths are larger inside than outside. Outside the MPAs, the length averaged 40 cm. For MPA #1, the sample mean length was found to be 44 cm, which was significantly greater than 40 cm (p=0.04). For MPA #2 the sample mean was 42 cm, which is not significantly larger than 40 cm (p=0.06).</p>
+
+<p>Since MPA #1&#39;s sample average rockfish length is significantly greater than 40 cm, but MPA #2&#39;s sample mean length isn&#39;t, can we say that MPA #1 has significantly larger fish than MPA #2?</p>
+
+<p>We cannot. We would need to do a third hypothesis test to directly examine whether lengths differ significantly between the MPAs.</p>
+
+<p>To see why this is true, let&#39;s take a more extreme example. Suppose that MPA #1&#39;s average length was 43 cm, with a barely-significant $p=0.049$. MPA #2 has an average length of 42.999 cm, barely insignificant with $p=0.0501$. In this case, it obviously makes no sense to say that MPA #1 and MPA #2 have significantly different fish lengths.</p>
+
+<p>This error is very widespread in neuroscience. A <a href="https://www.theguardian.com/commentisfree/2011/sep/09/bad-science-research-error">paper from 2011</a> examined 513 papers published in prestigious neuroscience journals. <strong>Of the 137 papers that could have made this error, about half did.</strong> There&#39;s no good reason to think that neuroscientists are especially prone to make this error compared to researchers in other fields, so it is reasonable to think that this error is similarly common in marine sciences.</p>
+
+<p>The big problem with this fallacy is that it systematically causes insignificant differences between experimental groups to be deemed significant. A proper test of the difference in differences is typically far less likely to find a significant result. Thus, it is an easy way to come to erroneous significant conclusions.</p>
+
+<h2>Conclusions</h2>
+
+<p>It is incredibly hard and confusing to use P-values properly. As we have seen, it is possible to get error rates an order of magnitude larger than a naive interpretation of the P-value would suggest. Other frequentist techniques such as confidence intervals or likelihood-ratio tests are an improvement in some ways. However, frequentist methods in general make it very hard to reliably include prior information. This is the underlying cause of most of the problems I have discussed.</p>
+
+<p>There is a better alternative: The Bayesian statistical paradigm offers a common-sense and mathematically consistent way to evaluate hypotheses using all available evidence. Unlike frequentist inference techniques, Bayesian methods can give us the actual probabilities of competing hypotheses. That is what we need to make rational decisions under uncertainty. In fact, we used Bayesian reasoning earlier in this post to calculate the chance that a significant result is null, while taking into account the base rate. Read more about it in my next post.</p>
+

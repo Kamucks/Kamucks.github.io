@@ -18,19 +18,39 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Michael Hay
+title: Michael Hay, Ph.D.
+name: Michael Hay, Ph.D.
+markdown: kramdown
+kramdown:
+  math_engine: katex
 email: mhay@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
+  Data scientist and developer 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  kamucks
-
 is_project_page: false
 # Build settings
-theme: jekyll-theme-cayman
+remote_theme: "mmistakes/minimal-mistakes@4.20.2"
+  #theme: minimal-mistakes-jekyll #jekyll-theme-slate
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+  - jekyll-include-cache
 
+minimal_mistakes_skin: dark
+# Site Author
+author:
+  bio: "Functional programmer and data surgeon"
+  name             : Michael Hay, Ph.D.
+  location         : "Spokane, WA"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Kamucks"
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -1,0 +1,50 @@
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<h2>Calling everything with p &lt; 0.05 &quot;significant&quot; is just plain wrong</h2>
+
+<p>The practice of statistics in the sciences often takes the form of drawing scientific conclusions from cargo-cult application of inappropriate or outdated statistical methods, often to the exclusion of prior evidence or plausibility. This has serious consequences for reproducibility and reliability of scientific results. Perhaps the number one issue is the over-reliance and lack of understanding of null-hypothesis significance testing, and blind faith in the reliability of the P-values these tests provide.</p>
+
+<p>There is growing recognition that bad statistics is a serious threat to the credibility and accuracy of scientific results in a number of fields. Psychology is undergoing a replication crisis, where many so-called significant results do not stand up to repeated experimentation. This is in large part due to the belief that a significant P-value directly relates to scientific significance, which is roundly false. A <a href="http://science.sciencemag.org/content/349/6251/aac4716">2015 study</a> which replicated 100 studies published in high-impact psychology journals yielded statistically significant results in only 36% of those studies, despite the fact that 97% of the original studies reported significant results. The same crisis is occurring in biomedicine. <a href="https://www.nature.com/news/biotech-giant-publishes-failures-to-confirm-high-profile-science-1.19269">Work</a> by the biotechnology company Amgen attempted to reproduce 53 &quot;landmark&quot; cancer studies, and were only able to replicate the results in a mere 6 cases. Other meta-studies have reached similarly worrisome conclusions.</p>
+
+<p>There are no open rumblings of a replication crisis in fisheries or marine policy; however, researchers and policy makers should not consider themselves immune. Many of the same attributes that created such a severe replication crisis in psychology and biomedicine also exist in marine sciences. Lack of rigorous theory to guide hypotheses (as physics or chemistry enjoy), small sample sizes, over-reliance on null hypothesis testing, and post-hoc theorizing (formulating hypothesis based on a dataset, and testing it with the same dataset) all combine to make a recipe for lots of incorrect &quot;significant&quot; results.</p>
+
+<p>In this post, I will go over some common misconceptions of what P-values actually tell us, and why &quot;statistical significance&quot; is not even close to the same thing as scientific significance.</p>
+
+<h2>What <em>is</em> a p-value? Not anything particularly useful</h2>
+
+<p>Suppose that we are interested in whether rockfish within an MPA tend to be larger than rockfish outside of the MPA. We hypothesize that fish within the MPA are larger on average because less pressure from fishing allows fish to grow larger. This is our alternate hypothesis, often denoted by $H_1$. Our null hypothesis ($H_0$) is that there is no such difference. To test this, we measure a sample of rockfish inside the MPA, and measure another sample outside the MPA, and compare the sample mean lengths.</p>
+
+<p>A P-value is the probability $p$ that, <em>if the null hypothesis is true</em>, we obtain a statistical result as or more extreme than we got with our data.&nbsp; Here, our null hypothesis is that the average fish lengths are equal, and the statistic we test the null hypothesis with is the sample mean. If the sample taken within the MPA has much larger fish on average than the sample taken outside, it would be an extreme observation under the null hypothesis, giving a low P-value (and a statistically significant result).</p>
+
+<p><strong>A P-value is not the probability that the alternative hypothesis is false, or the probability that the null hypothesis is true, or the probability that the experimental data could have arisen by chance! </strong>What we actually want to know is the probability that the average fish lengths are different, given the data we observed ($\mathbf{Pr}(H_1|d)$). The P-value absolutely does not tell us anything about this, at least on its own.</p>
+
+<p>The interpretation of a P-value as the probability of a that the alternative hypothesis is false, or as the probability that the null hypothesis is true is known as the <em>inverse probability fallacy.</em> Interpreting the P-value as the probability of the null hypothesis tends to overestimate the confidence in a significant result, sometimes to a severe degree (more about this in my next post). It&#39;s a bit like thinking that the probability that an individual is American <em>given</em> that they are the US president is the same as the probability that they are the US president <em>given</em> that they are American.</p>
+
+<p>Since P-values do not actually tell us the probabilities of competing hypotheses, they are useless on their own. <strong>Indeed, <a href="http://www.amstat.org/asa/files/pdfs/P-ValueStatement.pdf">according to the American Statistical Association</a>, P-values should never be used to make a decision of whether an effect is scientifically significant in isolation.</strong></p>
+
+<p>Unfortunately, many or perhaps most researchers subscribe to the inverse probability fallacy. In a 2015 survey of Spanish academic psychologists, 94% of respondents fell prey to some version of it. It&#39;s no surprise there are so many flawed papers if such a great number of researchers (and reviewers) fundamentally misinterpret statistical evidence in this way.</p>
+
+<h2>More problems</h2>
+
+<p>In addition, the P-value assumes that there are only two hypothesis: the null hypothesis and the alternative hypothesis. The null hypothesis is usually false in reality. In our fish example, we know that the average fish lengths can&#39;t actually be precisely the same inside and outside the MPA. One could imagine other situations where there could be other hypotheses, perhaps more probable than the null and alternative hypotheses that we have decided to anoint as the only two possible options. In this case, refuting the null hypothesis is basically like tearing down a straw man. It only shows that the observed data would be improbable if a hypothesis that is improbable in the first place were true. In other words, nothing.</p>
+
+<p>Null-hypothesis significance tests are often mistakenly used to estimate effect sizes. Null-hypothesis significance testing systematically overestimates effect sizes when significant results are found. For example, suppose that there is actually a difference in fish lengths inside and outside the MPA, but it is small: Rockfish inside the MPA are only a centimeter longer on average than fish outside the MPA. If we only have a small sample of fish, we have no hope of detecting such a tiny effect accurately (of course, we probably don&#39;t know the effect size a priori, otherwise why are we even doing this experiment?).</p>
+
+<p>Suppose that our rockfish experiment shows that the sample mean fish lengths differ inside and outside the MPA, which is a result that would happen from time to time. For the sample mean fish-lengths to differ significantly with such a small sample, the sample difference must be far larger than the true difference (since a difference of the true 1 cm could not be significant for such a small sample). Instead of a 1 cm difference, our significant result will report, say, a 5 cm difference.</p>
+
+<p>So, this significance test detects either nothing (which is false, there is a difference of 1 cm), or something far larger than the true effect. It is fundamentally incapable of yielding a result that is not completely and utterly wrong. We could have chosen different hypotheses to fix this particular problem. For example, we could take our null hypothesis as being that the difference in lengths is less than 2 cm. In that way, we could get a correct answer (the truth is consistent with the null hypothesis). But what if the true mean length difference was instead 3 cm? Then we would be right back where we were before.</p>
+
+<h2>Conclusions</h2>
+
+<p>Null-hypothesis significance tests and P-values do not deserve their place as the default method of evaluating hypotheses based on experimental data.&nbsp; They are highly unintuitive. They do not tell us what we want to know and give absolutely no quantitative indication of the reliability of a result on their own. In my next post, I will show some additional ways in which P-values are commonly misapplied, as well as some better alternative techniques.</p>
+
