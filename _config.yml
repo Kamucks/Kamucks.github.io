@@ -21,8 +21,6 @@
 title: Michael Hay, Ph.D.
 name: Michael Hay, Ph.D.
 markdown: kramdown
-kramdown:
-  math_engine: katex
 email: mhay@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Data scientist and developer 
