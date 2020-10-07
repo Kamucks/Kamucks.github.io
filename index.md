@@ -67,7 +67,7 @@ I am passionate about all things programming, statistics, and math. I have years
 * Data scientist, [Open Communications for the Oceans](https://www.octogroup.org) (OCTO) 
 2018-2020
 * Ph.D., Earth and Space Sciences, University of Washington (2017);
-Thesis: [Stability and Uncertainty of Ice-Sheet Crystal Fabrics](/assets/thesis.pdf) (pdf)
+Thesis: [Stability and Uncertainty of Ice-Sheet Crystal Fabrics](/assets/hay_thesis.pdf) (pdf)
 
 * B.S., Economics and Mathematics, University of Washington (2007)
 

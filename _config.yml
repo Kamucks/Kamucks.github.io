@@ -46,6 +46,9 @@ author:
   name             : Michael Hay, Ph.D.
   location         : "Spokane, WA"
   links:
+    - label: "Resume"
+      icon: "fas fa-fw fa-link"
+      url: "/assets/hay_resume.pdf"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Kamucks"
